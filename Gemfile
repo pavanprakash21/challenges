@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'faraday'
 gem 'colorize'
+gem 'faraday'
 gem 'oj'
+gem 'openssl'
 gem 'rake'
 
 group :development do

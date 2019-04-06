@@ -1,5 +1,5 @@
 module Hackattic
-  # Mini miner
+  # Tales of SSL
   class TalesOfSsl
     require 'base64'
     require 'openssl'

@@ -3,7 +3,7 @@ require 'colorize'
 require 'oj'
 require 'digest'
 
-Dir[File.expand_path('../hackattic/**/*.rb', __FILE__)].each { |f| require f }
+Dir[File.expand_path('hackattic/**/*.rb', __dir__)].each { |f| require f }
 
 # Use this module to solve a problem
 # Example: Hackattic.solve(challenge_name)
@@ -28,6 +28,7 @@ module Hackattic
 
     def send_solution(challenge, solution)
       payload = Oj.dump(solution, mode: :compat)
+      p payload
       response = Faraday.post(url(challenge, 'solve'), payload, content_type)
       puts response.body
     end
